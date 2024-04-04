@@ -1,7 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   devtools: {enabled: true},
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+  ],
   runtimeConfig: {
     // The private keys which are only available server-side
     apiSecret: '123',
@@ -10,4 +13,6 @@ export default defineNuxtConfig({
       apiBase: '/api'
     }
   }
-})
+});
+
+
