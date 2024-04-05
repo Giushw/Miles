@@ -2,7 +2,6 @@
   <div>
     <div class="homeLayout">
       <HeaderHome />
-      <p>Specific layout content for homepage</p>
       <slot />
       <FooterHome />
     </div>
@@ -11,6 +10,6 @@
 
 <style lang="scss">
   .homeLayout {
-    @apply p-7;
+    // @apply p-7;
   }
 </style>

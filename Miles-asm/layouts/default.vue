@@ -10,11 +10,10 @@
 </template>
 
 <style lang="scss">
-  .defaultLayout {
-    @apply p-5;
-  }
+  // .defaultLayout {
+  // }
 
   .spacer {
-    @apply mt-3;
+    @apply mt-16;
   }
 </style>

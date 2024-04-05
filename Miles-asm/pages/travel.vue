@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="travleWrapper">
-      <h1>Welcome to the Travel Page!</h1>
       <TableTravel />
     </div>
   </div>

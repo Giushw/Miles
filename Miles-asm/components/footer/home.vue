@@ -1,33 +1,49 @@
 <template>
-    <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
-        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © 2023 
-          <a href="https://flowbite.com/" class="hover:underline">
-            Flowbite™
-          </a>. 
-          All Rights Reserved.
-        </span>
-        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-          <li>
-            <a href="#" class="hover:underline me-4 md:me-6">About</a>
-          </li>
-          <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-          </li>
-          <li>
-            <a href="#" class="hover:underline">Contact</a>
-          </li>
-        </ul>
-        </div>
-    </footer>
+  <footer class="footer">
+    <div class="footer_home">
+      <span class="footer_copyright">
+        © 2024 Miles™ All Rights Reserved.
+      </span>
+      <ul class="footer_links">
+        <li>
+          <NuxtLink to="/about" class="footer_link">About</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/faq" class="footer_link">FAQ</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/privacy" class="footer_link">Privacy Policy</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/contact" class="hover:underline">Contact</NuxtLink>
+        </li>
+      </ul>
+    </div>
+  </footer>
 </template>
 
-<script setup lang="ts">
-</script>
-
 <style lang="scss">
+  .footer {
+    @apply shadow p-4 bg-gray-800;
+
+    &_home {
+      @apply w-full mx-auto max-w-screen-xl p-4;
+      @apply md:flex md:items-center md:justify-between;
+    };
+
+    &_copyright {
+      @apply text-sm text-gray-400;
+      @apply sm:text-center;
+    };
+
+    &_links {
+      @apply flex flex-wrap items-center mt-3 text-sm font-medium  text-gray-400;
+      @apply sm:mt-0;
+    };
+
+    &_link {
+      @apply hover:underline me-4;
+      @apply md:me-6;
+    };
+  }
 </style>

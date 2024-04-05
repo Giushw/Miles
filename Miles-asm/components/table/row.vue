@@ -4,16 +4,22 @@
     <td class="tableRow_row">{{props.startDate}}</td>
     <td class="tableRow_row">{{props.endDate}}</td>
     <td class="tableRow_row">
-      <CommonDialog v-if="props.image" fullPicture :srcPicture="props.image" :altPicture="props.name">
-        <font-awesome-icon :icon="faImage" />
-      </CommonDialog>
-      <font-awesome-icon v-if="!props.image" :icon="faImage" class="color-gray" />
+      <Popover class="relative" v-if="props.image">
+        <PopoverButton>
+          <font-awesome-icon :icon="faImage" class="text-yellow-500"/>
+        </PopoverButton>
+
+        <PopoverPanel class="absolute z-10">
+          <img :src="`/image/${props.image}_lg.jpg`" :alt="props.name" />
+        </PopoverPanel>
+      </Popover>
+
+      <font-awesome-icon v-else :icon="faImage" class="text-gray-500" />
     </td>
     <td class="tableRow_row">{{props.description}}</td>
     <td class="tableRow_row">{{props.price}}</td>
     <td class="tableRow_row">{{props.rating}}</td>
     <td class="tableRow_row tableRow_actions">
-
       <Menu as="div" class="relative inline-block text-left">
         <div>
           <MenuButton
@@ -41,6 +47,7 @@
                     active ? 'bg-violet-500 text-white' : 'text-gray-900',
                     'group flex w-full items-center rounded-md px-2 py-2 text-sm',
                   ]"
+                  @click="editRow"
                 >
                   <font-awesome-icon :icon="faPen" class="mr-2 w-5 h-5" aria-hidden="true" />
                   Edit
@@ -55,6 +62,7 @@
                     active ? 'bg-violet-500 text-white' : 'text-gray-900',
                     'group flex w-full items-center rounded-md px-2 py-2 text-sm',
                   ]"
+                  @click="deleteRow"
                 >
                   <font-awesome-icon :icon="faTrash" class="mr-2 w-5 h-5" aria-hidden="true" />
                   Delete
@@ -72,10 +80,29 @@
   import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
   import {faImage, faEllipsis, faPen, faTrash} from '@fortawesome/free-solid-svg-icons';
   import type {TravelRow} from '../../assets/types/travel';
-  import {Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue';
+  import {
+    Menu,
+    MenuButton,
+    MenuItems,
+    MenuItem,
+    Popover,
+    PopoverButton,
+    PopoverPanel
+  } from '@headlessui/vue';
 
   const props = defineProps<TravelRow>();
 
+  const emit = defineEmits(['edit-row', 'delete-row']);
+
+  const editRow = () => {
+    console.log('Edit row: ', props.id);
+    emit('edit-row', props.id);
+  };
+
+  const deleteRow = () => {
+    console.log('Delete row: ', props.id);
+    emit('delete-row', props.id);
+  };
 </script>
 
 <style lang="scss">

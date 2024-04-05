@@ -1,4 +1,5 @@
 export interface TravelRow {
+  id: number,
   name: string,
   startDate: string,
   endDate: string,

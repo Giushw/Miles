@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h1>Welcome to the Index Page!</h1>
+    <!-- <h1>Welcome to the Index Page!</h1>
     <ul>
       <li><NuxtLink to="/travel">Travel</NuxtLink></li>
       <li><NuxtLink to="/booking">Booking</NuxtLink></li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
