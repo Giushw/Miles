@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
   ],
   app: {
-    pageTransition: {name: 'page', mode: 'out-in'},
+    // TODO: find why this generate a bug with layout breaking only on first render
+    // pageTransition: {name: 'page', mode: 'out-in'},
     // layoutTransition: {name: 'layout', mode: 'out-in'}
   }
 });

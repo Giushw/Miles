@@ -107,8 +107,7 @@
     'Name', 'Departure', 'Arrival', 'Picture', 'Description', 'Price', 'Rating'
   ];
 
-  const {data} = await useFetch<TravelRow[]>('/api/travel');
-  // const {pending, data} = await useLazyFetch<TravelRow[]>('/api/travel');
+  const {pending, data} = await useLazyFetch<TravelRow[]>('/api/travel');
   
   const travels: Ref<TravelRow[] | null> = ref(data);
 </script>
