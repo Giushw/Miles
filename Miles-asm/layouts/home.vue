@@ -2,7 +2,7 @@
   <div>
     <div class="homeLayout">
       <HeaderHome />
-      <slot />
+      <slot class="content" />
       <FooterHome />
     </div>
   </div>
@@ -10,6 +10,15 @@
 
 <style lang="scss">
   .homeLayout {
-    // @apply p-7;
+    // > * {
+    //   height: 90vh;
+
+    //   &:first-child, &:last-child {
+    //     height: 5vh;
+    //   }
+    // };
+  }
+  .content {
+    // hei
   }
 </style>

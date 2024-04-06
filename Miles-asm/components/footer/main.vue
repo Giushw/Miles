@@ -3,10 +3,10 @@
     <div class="footer_main">
       <div class="footer_heading">
         <div class="footer_logo">
-          <a href="https://miles.com/" class="footer_logoGroup">
+          <NuxtLink to="/" class="footer_logoGroup">
             <img src="https://flowbite.com/docs/images/logo.svg" class="footer_logoImage" alt="Miles Logo" />
             <span class="footer_logoText">Miles</span>
-          </a>
+          </NuxtLink>
         </div>
         <div class="footer_nav">
           <div>
@@ -49,7 +49,7 @@
         <span class="footer_copyright">
           © 2023 Miles™ All Rights Reserved.
         </span>
-        <div class="footer_socials">
+        <div class="footer_social">
           <a href="#" class="footer_socialLink">
             <font-awesome-icon :icon="faFacebookF" class="w-4 h-4"/>
             <span class="sr-only">Facebook page</span>
@@ -98,37 +98,37 @@
     &_logo {
       @apply mb-6;
       @apply md:mb-0;
-    };
 
-    &_logoGroup {
-      @apply flex items-center;
-    };
+      &Group {
+        @apply flex items-center;
+      };
 
-    &_logoImage {
+      &Image {
       @apply h-8 me-3;
-    };
+      };
 
-    &_logoText {
-      @apply self-center text-2xl font-semibold whitespace-nowrap text-white;
+      &Text {
+      @apply self-center text-2xl font-semibold whitespace-nowrap text-white font-spinnaker;
+      };
     };
 
     &_nav {
       @apply grid grid-cols-2 gap-8;
       @apply sm:gap-6 sm:grid-cols-3;
+
+      &Title {
+        @apply mb-6 text-sm font-semibold uppercase text-white;
+      };
+
+      &List {
+        @apply text-gray-400 font-medium;
+      };
+
+      &Link {
+        @apply hover:underline;
+      }
     };
 
-    &_navTitle {
-      @apply mb-6 text-sm font-semibold uppercase text-white;
-    };
-
-    &_navList {
-      @apply text-gray-400 font-medium;
-    }
-
-    &_navLink {
-      @apply hover:underline;
-    }
-    
     &_lineSpacer {
       @apply my-6 border-gray-700;
       @apply sm:mx-auto;
@@ -144,13 +144,13 @@
       @apply sm:text-center;
     };
 
-    &_socials {
+    &_social {
       @apply flex mt-4;
       @apply sm:justify-center sm:mt-0;
-    };
 
-    &_socialLink {
-      @apply text-gray-500 hover:text-white ms-5;
+      &Link {
+        @apply text-gray-500 hover:text-white ms-5;
+      }
     };
   }
 </style>

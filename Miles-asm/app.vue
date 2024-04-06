@@ -5,10 +5,12 @@
 </template>
 
 <script setup lang="ts">
-  import './assets/css/main.css';
 </script>
 
 <style lang="scss">
+  html {
+    @apply font-nunito;
+  };
   // TODO: Correated to the nuxt transtion bug
   // .page-enter-active,
   // .page-leave-active {

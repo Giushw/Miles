@@ -1,10 +1,10 @@
 <template>
   <header class="header">
     <div class="header_wrapper">
-      <a href="https://miles.com/" class="header_logo">
-          <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Miles Logo">
-          <span class="header_logoText">Miles</span>
-      </a>
+      <NuxtLink to="/" class="header_logo">
+        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Miles Logo" />
+        <span class="header_logoText">Miles</span>
+      </NuxtLink>
       <div class="header_menu">
         <Menu>
           <MenuButton class="header_menuButton">
@@ -58,7 +58,7 @@
       @apply flex items-center space-x-3 rtl:space-x-reverse;
 
       &Text {
-        @apply self-center text-2xl font-semibold whitespace-nowrap text-white;
+        @apply self-center text-2xl font-semibold whitespace-nowrap text-white font-spinnaker;
       }
     };
 

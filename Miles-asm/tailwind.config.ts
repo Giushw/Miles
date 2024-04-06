@@ -1,5 +1,4 @@
-import type { Config } from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme';
+import type {Config} from 'tailwindcss';
 
 export default {
   content: [
@@ -12,8 +11,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        anybody: ['"Anybody"', ...defaultTheme.fontFamily.sans],
-        raleway : ['"Raleway"', ...defaultTheme.fontFamily.sans]
+        spinnaker: ['Spinnaker', 'sans-serif'],
+        nunito: ['Nunito', 'sans-serif'],
+        josefin: ['Josefin Sans', 'sans-serif']
       }
     },
   },
