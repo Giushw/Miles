@@ -1,13 +1,5 @@
-import {fileURLToPath} from 'node:url';
-import {defineConfig, configDefaults} from 'vitest/config';
-import vue from '@vitejs/plugin-vue';
+import {defineVitestConfig} from '@nuxt/test-utils/config'
 
-export default defineConfig({
-  plugins: [vue()],
-  test: {
-    environment: 'jsdom',
-    exclude: [...configDefaults.exclude, 'e2e/*'],
-    root: fileURLToPath(new URL('./', import.meta.url))
-  }
+export default defineVitestConfig({
+  // any custom Vitest config you require
 })
-

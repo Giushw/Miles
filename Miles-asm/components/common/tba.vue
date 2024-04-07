@@ -1,16 +1,13 @@
 <template>
-  <div>
-    <section class="jumbotron">
-      <div class="jumbotron_heading">
-        <h1 class="jumbotron_title">Full speed Ahead!</h1>
-        <p class="jumbotron_paragraph">
-          Ready to rack up some serious Miles (pun intended!) and ditch the daily grind?
-          Explore our incredible destinations, we have everything for your next adventures.  
-          <strong class="jumbotron_accent">Search</strong> for your dream vacation or if you already know where to go, jump straight to <strong class="jumbotron_accent">Booking</strong>!
+    <div>
+    <section class="empty">
+      <div class="empty_heading">
+        <h1 class="empty_title">404</h1>
+        <p class="empty_paragraph">
+          Sorry but you are <strong class="empty_accent">Miles</strong> ahead (pun intended!) and the <strong class="empty_accent">{{text}}</strong> page is still under construction!
         </p>
         <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-          <NuxtLink to="/travel" class="jumbotron_cta">Travel</NuxtLink>
-          <NuxtLink to="/booking" class="jumbotron_cta">Booking</NuxtLink>
+          <NuxtLink to="/" class="empty_cta">Curse you, irony!</NuxtLink>
         </div>
       </div>
     </section>
@@ -18,14 +15,18 @@
 </template>
 
 <script setup lang="ts">
-  definePageMeta({
-    layout: 'home'
-  })
+	defineProps({
+		text: {
+			type: String,
+			required: true
+		}
+	});
 </script>
 
+
 <style lang="scss">
-  .jumbotron {
-    @apply bg-center bg-no-repeat bg-[url('/image/wall.jpg')] bg-gray-700 bg-blend-multiply h-full flex flex-col justify-center;
+  .empty {
+    @apply bg-center bg-no-repeat bg-[url('/image/404.jpg')] bg-gray-700 bg-blend-multiply flex flex-col justify-center;
   
     &_heading {
       @apply px-4 mx-auto max-w-screen-xl text-center py-24;
@@ -34,7 +35,14 @@
 
     &_title {
       @apply mb-4 text-4xl font-extrabold tracking-tight leading-none text-yellow-500 font-josefin ;
-      @apply md:text-5xl lg:text-6xl;
+      @apply md:text-5xl lg:text-9xl;
+      // TODO: Tailwind Override for big font size
+      @media (max-width: 1023px) {
+        font-size: 12rem;
+      };
+      @media (min-width: 1024px) {
+        font-size: 20rem;
+      };
     };
 
     &_paragraph {

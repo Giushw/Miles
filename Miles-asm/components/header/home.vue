@@ -1,9 +1,9 @@
 <template>
-  <header class="header">
-    <div class="header_wrapper">
-      <NuxtLink to="/" class="header_logo">
-        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Miles Logo" />
-        <span class="header_logoText">Miles</span>
+  <header class="headerH">
+    <div class="headerH_wrapper">
+      <NuxtLink to="/" class="headerH_logo">
+        <img src="/svg/logo.svg" class="h-8" alt="Miles Logo" />
+        <span class="headerH_logoText">Miles</span>
       </NuxtLink>
     </div>
   </header>
@@ -13,7 +13,7 @@
 </script>
 
 <style lang="scss">
-  .header {
+  .headerH {
     @apply border-gray-200 bg-gray-900;
 
     &_wrapper {

@@ -2,7 +2,7 @@
   <div>
     <div class="homeLayout">
       <HeaderHome />
-      <slot class="content" />
+      <slot />
       <FooterHome />
     </div>
   </div>
@@ -10,15 +10,17 @@
 
 <style lang="scss">
   .homeLayout {
-    // > * {
-    //   height: 90vh;
-
-    //   &:first-child, &:last-child {
-    //     height: 5vh;
-    //   }
-    // };
+    header {
+      @apply bg-transparent -mb-16;
+    }
   }
-  .content {
-    // hei
+
+  .jumbotron, .empty {
+    @apply h-screen;
+  }
+
+  footer {
+    @apply bg-transparent -mt-32;
+    @apply lg:-mt-24;
   }
 </style>

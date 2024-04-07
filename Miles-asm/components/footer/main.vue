@@ -1,68 +1,68 @@
 <template>
-  <footer class="footer">
-    <div class="footer_main">
-      <div class="footer_heading">
-        <div class="footer_logo">
-          <NuxtLink to="/" class="footer_logoGroup">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="footer_logoImage" alt="Miles Logo" />
-            <span class="footer_logoText">Miles</span>
+  <footer class="footerM">
+    <div class="footerM_main">
+      <div class="footerM_heading">
+        <div class="footerM_logo">
+          <NuxtLink to="/" class="footerM_logoGroup">
+            <img src="https://flowbite.com/docs/images/logo.svg" class="footerM_logoImage" alt="Miles Logo" />
+            <span class="footerM_logoText">Miles</span>
           </NuxtLink>
         </div>
-        <div class="footer_nav">
+        <div class="footerM_nav">
           <div>
-            <h2 class="footer_navTitle">Resources</h2>
-            <ul class="footer_navList">
+            <h2 class="footerM_navTitle">Resources</h2>
+            <ul class="footerM_navList">
               <li class="mb-4">
-                <NuxtLink to="/about" class="footer_navLink">About us</NuxtLink>
+                <NuxtLink to="/about" class="footerM_navLink">About us</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/faq" class="footer_navLink">FAQ</NuxtLink>
+                <NuxtLink to="/faq" class="footerM_navLink">FAQ</NuxtLink>
               </li>
             </ul>
           </div>
           <div>
-            <h2 class="footer_navTitle">Get in touch</h2>
-            <ul class="footer_navList">
+            <h2 class="footerM_navTitle">Get in touch</h2>
+            <ul class="footerM_navList">
               <li class="mb-4">
-                <NuxtLink to="/contact" class="footer_navLink">Contact us</NuxtLink>
+                <NuxtLink to="/contact" class="footerM_navLink">Contact us</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/job" class="footer_navLink">Work with us</NuxtLink>
+                <NuxtLink to="/job" class="footerM_navLink">Work with us</NuxtLink>
               </li>
             </ul>
           </div>
           <div>
-            <h2 class="footer_navTitle">Legal</h2>
-            <ul class="footer_navList">
+            <h2 class="footerM_navTitle">Legal</h2>
+            <ul class="footerM_navList">
               <li class="mb-4">
-                <NuxtLink to="/privacy" class="footer_navLink">Privacy Policy</NuxtLink>
+                <NuxtLink to="/privacy" class="footerM_navLink">Privacy Policy</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/legal" class="footer_navLink">Terms &amp; Conditions</NuxtLink>
+                <NuxtLink to="/legal" class="footerM_navLink">Terms &amp; Conditions</NuxtLink>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <hr class="footer_lineSpacer" />
-      <div class="footer_bottom">
-        <span class="footer_copyright">
-          © 2023 Miles™ All Rights Reserved.
+      <hr class="footerM_lineSpacer" />
+      <div class="footerM_bottom">
+        <span class="footerM_copyright">
+          © 2024 Miles™ All Rights Reserved.
         </span>
-        <div class="footer_social">
-          <a href="#" class="footer_socialLink">
+        <div class="footerM_social">
+          <a href="#" class="footerM_socialLink">
             <font-awesome-icon :icon="faFacebookF" class="w-4 h-4"/>
             <span class="sr-only">Facebook page</span>
           </a>
-          <a href="#" class="footer_socialLink">
+          <a href="#" class="footerM_socialLink">
             <font-awesome-icon :icon="faTwitter" class="w-4 h-4"/>
             <span class="sr-only">Twitter page</span>
           </a>
-          <a href="#" class="footer_socialLink">
+          <a href="#" class="footerM_socialLink">
             <font-awesome-icon :icon="faLinkedin" class="w-4 h-4"/>
             <span class="sr-only">Linkedin account</span>
           </a>
-          <a href="#" class="footer_socialLink">
+          <a href="#" class="footerM_socialLink">
             <font-awesome-icon :icon="faGithub" class="w-4 h-4"/>
             <span class="sr-only">GitHub account</span>
           </a>
@@ -83,7 +83,7 @@
 </script>
 
 <style lang="scss">
-  .footer {
+  .footerM {
     @apply bg-gray-900;
 
     &_main {

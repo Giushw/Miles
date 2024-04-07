@@ -1,13 +1,13 @@
 <template>
-  <header class="header">
-    <div class="header_wrapper">
-      <NuxtLink to="/" class="header_logo">
+  <header class="headerM">
+    <div class="headerM_wrapper">
+      <NuxtLink to="/" class="headerM_logo">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Miles Logo" />
-        <span class="header_logoText">Miles</span>
+        <span class="headerM_logoText">Miles</span>
       </NuxtLink>
-      <div class="header_menu">
+      <div class="headerM_menu">
         <Menu>
-          <MenuButton class="header_menuButton">
+          <MenuButton class="headerM_menuButton">
             <span class="sr-only">Open main menu</span>
             <font-awesome-icon :icon="faBars" class="w-5 h-5"/>
           </MenuButton>
@@ -21,13 +21,13 @@
           </MenuItems>
         </Menu>
       </div>
-      <nav class="header_nav" id="navbar-sticky">
-        <ul class="header_navList">
+      <nav class="headerM_nav" id="navbar-sticky">
+        <ul class="headerM_navList">
           <li>
-            <NuxtLink to="/travel" class="header_link">Travel</NuxtLink>
+            <NuxtLink to="/travel" class="headerM_link">Travel</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/booking" class="header_link">Booking</NuxtLink>
+            <NuxtLink to="/booking" class="headerM_link">Booking</NuxtLink>
           </li>
         </ul>
       </nav>
@@ -47,7 +47,7 @@
 </script>
 
 <style lang="scss">
-  .header {
+  .headerM {
     @apply bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-600;
 
     &_wrapper {

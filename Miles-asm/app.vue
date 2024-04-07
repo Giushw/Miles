@@ -4,9 +4,6 @@
   </NuxtLayout>
 </template>
 
-<script setup lang="ts">
-</script>
-
 <style lang="scss">
   html {
     @apply font-nunito;

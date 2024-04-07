@@ -1,18 +1,18 @@
 <template>
-  <footer class="footer">
-    <div class="footer_home">
-      <span class="footer_copyright">
+  <footer class="footerH">
+    <div class="footerH_home">
+      <span class="footerH_copyright">
         © 2024 Miles™ All Rights Reserved.
       </span>
-      <ul class="footer_links">
+      <ul class="footerH_links">
         <li>
-          <NuxtLink to="/about" class="footer_link">About</NuxtLink>
+          <NuxtLink to="/about" class="footerH_link">About</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/faq" class="footer_link">FAQ</NuxtLink>
+          <NuxtLink to="/faq" class="footerH_link">FAQ</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/privacy" class="footer_link">Privacy Policy</NuxtLink>
+          <NuxtLink to="/privacy" class="footerH_link">Privacy Policy</NuxtLink>
         </li>
         <li>
           <NuxtLink to="/contact" class="hover:underline">Contact</NuxtLink>
@@ -23,8 +23,8 @@
 </template>
 
 <style lang="scss">
-  .footer {
-    @apply shadow p-4 bg-gray-800;
+  .footerH {
+    @apply shadow p-4;
 
     &_home {
       @apply w-full mx-auto max-w-screen-xl p-4;
