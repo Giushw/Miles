@@ -3,62 +3,60 @@
     <div class="travelTable_wrapper">
       <div class="travelTable_content">
         <div class="travelTable_heading">
-          <div class="travelTable_search">
-            <form class="flex items-center">
-                <label for="simple-search" class="sr-only">Search</label>
-                <div class="relative w-full">
-                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                      <font-awesome-icon :icon="faMagnifyingGlass" class="w-5 h-5 text-gray-400"/>
-                    </div>
-                    <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Search" required=false>
-                </div>
-            </form>
-          </div>
-          <!-- Actions -->
-          <div class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
-              <button type="button" class="flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
-                  <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
-                  </svg>
-                  Add new
+          <div class="travelTable_actions">
+              <button type="button" class="travelTable_actionsAdd">
+                <font-awesome-icon :icon="faPlus" class="travelTable_actionssSvg mr-2" />
+                Add new
               </button>
-              <div class="flex items-center space-x-3 w-full md:w-auto">
-                <!-- Filters -->
-                  <button id="filterDropdownButton" data-dropdown-toggle="filterDropdown" class="w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" type="button">
-                      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-4 w-4 mr-2 text-gray-400" viewbox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clip-rule="evenodd" />
-                      </svg>
+
+              <Menu as="div" class="travelTable_actionsFilter">
+                <div>
+                  <MenuButton class="travelTable_filterBtn">
+                    <font-awesome-icon :icon="faFilter" class="travelTable_actionsSvg mr-2"/>
                       Filter
-                      <svg class="-mr-1 ml-1.5 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                          <path clip-rule="evenodd" fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-                      </svg>
-                  </button>
-                  <div id="filterDropdown" class="z-10 hidden w-48 p-3 bg-white rounded-lg shadow dark:bg-gray-700">
-                      <h6 class="mb-3 text-sm font-medium text-gray-900 dark:text-white">Choose brand</h6>
-                      <ul class="space-y-2 text-sm" aria-labelledby="filterDropdownButton">
-                          <li class="flex items-center">
-                              <input id="apple" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                              <label for="apple" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Apple (56)</label>
-                          </li>
-                          <li class="flex items-center">
-                              <input id="fitbit" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                              <label for="fitbit" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Microsoft (16)</label>
-                          </li>
-                          <li class="flex items-center">
-                              <input id="razor" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                              <label for="razor" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Razor (49)</label>
-                          </li>
-                          <li class="flex items-center">
-                              <input id="nikon" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                              <label for="nikon" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">Nikon (12)</label>
-                          </li>
-                          <li class="flex items-center">
-                              <input id="benq" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                              <label for="benq" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">BenQ (74)</label>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
+                    <font-awesome-icon :icon="faChevronDown" class="travelTable_actionsSvg ml-2"/>
+                  </MenuButton>
+                </div>
+
+                <transition
+                  enter-active-class="transition duration-100 ease-out"
+                  enter-from-class="transform scale-95 opacity-0"
+                  enter-to-class="transform scale-100 opacity-100"
+                  leave-active-class="transition duration-75 ease-in"
+                  leave-from-class="transform scale-100 opacity-100"
+                  leave-to-class="transform scale-95 opacity-0"
+                >
+                  <MenuItems class="travelTable_filterItems">
+                    <div class="px-1 py-1">
+                      <MenuItem v-slot="{ active }">
+                        <RadioGroup v-model="filter">
+                          <RadioGroupLabel class="px-3 py-5 text-white">Rating</RadioGroupLabel>
+                          <RadioGroupOption v-slot="{ checked }" value="top">
+                            <span :class="checked ? 'travelTable_filterItem--Active' : ''" class="travelTable_filterItem">
+                              5 Stars only
+                            </span>
+                          </RadioGroupOption>
+                          <RadioGroupOption v-slot="{ checked }" value="mid">
+                            <span :class="checked ? 'travelTable_filterItem--Active' : ''" class="travelTable_filterItem">
+                              4 to 2 Stars
+                            </span>
+                          </RadioGroupOption>
+                          <RadioGroupOption v-slot="{ checked }" value="wrost">
+                            <span :class="checked ? 'travelTable_filterItem--Active' : ''" class="travelTable_filterItem">
+                              1 Stars only
+                            </span>
+                          </RadioGroupOption>
+                          <RadioGroupOption v-slot="{ checked }" value="none">
+                            <span :class="checked ? 'travelTable_filterItem--Active' : ''" class="travelTable_filterItem">
+                              None
+                            </span>
+                          </RadioGroupOption>
+                        </RadioGroup>
+                      </MenuItem>
+                    </div>
+                  </MenuItems>
+                </transition>
+              </Menu>
           </div>
         </div>
         <!-- Table -->
@@ -66,8 +64,8 @@
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
-                        <template v-for="heading in headings">
-                          <th scope="col" class="px-4 py-3">{{heading}}</th>
+                        <template v-for="heading in headings" :key="heading.key">
+                          <th scope="col" class="px-4 py-3">{{heading.label}}</th>
                         </template>
                         <th scope="col" class="px-4 py-3">
                             <span class="sr-only">Actions</span>
@@ -84,7 +82,8 @@
                       </tr>
                     </template>
                     <template v-else>
-                      <TableRow v-for="travel in travels"
+                      <TableRow v-for="travel in filteredTravels"
+                        :key="travel.id"
                         :id="travel.id"
                         :name="travel.name"
                         :start-date="travel.startDate"
@@ -106,22 +105,51 @@
 
 <script setup lang="ts">
   import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
-  import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
-  import type {TravelRow} from '../../assets/types/travel';
+  import {faPlus, faFilter, faChevronDown} from '@fortawesome/free-solid-svg-icons';
+  import {Menu, MenuButton, MenuItems, MenuItem} from '@headlessui/vue';
+  import {
+    RadioGroup,
+    RadioGroupLabel,
+    RadioGroupOption,
+  } from '@headlessui/vue';
+  import type {TravelRow, filterType, KL} from '../../assets/types/travel';
 
-  const headings: string[] = [
-    'Name', 'Departure', 'Arrival', 'Picture', 'Description', 'Price', 'Rating'
+  const headings: KL[] = [
+    {key: 'name', label: 'Name'},
+    {key: 'start', label: 'Departure'},
+    {key: 'end', label: 'Arrival'},
+    {key: 'img', label: 'Picture'},
+    {key: 'info', label: 'Description'},
+    {key: 'price', label: 'Price'},
+    {key: 'rate', label: 'Rating'}
   ];
 
   const {pending, data} = await useLazyFetch<TravelRow[]>('/api/travel');
   
   const travels: Ref<TravelRow[] | null> = ref(data);
+
+  const filter: Ref<filterType> = ref('none');
+
+  const filteredTravels: ComputedRef<TravelRow[]> = computed(() => {
+  return travels.value?.filter(travel => {
+    switch (filter.value) {
+      case 'top':
+        return Math.trunc(travel.rating) === 5;
+      case 'wrost':
+        return Math.trunc(travel.rating) === 1;
+      case 'mid':
+        return travel.rating >= 2 && travel.rating <= 4;
+      default:
+        return true; // Keep all items if no filter is selected
+    }
+  }) || [];
+});
 </script>
 
 <style lang="scss">
   .travelTable {
     @apply bg-gray-900 p-3;
-    @apply sm:p-5;
+    @apply sm:p-5 lg:min-h-[65vh];
 
     &_wrapper {
       @apply mx-auto max-w-screen-xl px-4 w-full;
@@ -134,14 +162,46 @@
     };
 
     &_heading {
-      @apply flex flex-col items-center justify-between space-y-3 p-4;
+      @apply flex flex-col items-center justify-end space-y-3 p-4;
       @apply md:flex-row md:space-y-0 md:space-x-4;
     };
 
-    &_search {
-      @apply w-full;
-      @apply md:w-1/2;
-    }
+    &_actions {
+      @apply w-full flex flex-col space-y-2 items-stretch justify-end flex-shrink-0;
+      @apply md:w-auto md:flex-row md:items-center md:space-x-3 md:space-y-0;
+
+      &Svg {
+        @apply h-4 w-4;
+      };
+
+      &Add {
+        @apply flex items-center justify-center font-medium rounded-lg text-sm px-4 py-2;
+        @apply transition-colors text-gray-800 bg-yellow-500 hover:text-white hover:bg-yellow-800 focus:ring-4 focus:ring-yellow-900;
+      };
+
+      &Filter {
+        @apply relative inline-flex text-left;
+      };
+    };
+
+    &_filter {
+      &Btn {
+        @apply inline-flex w-full items-center justify-center font-medium rounded-lg text-sm px-4 py-2;
+        @apply bg-black/20 text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75;
+      };
+
+      &Items {
+        @apply absolute z-10 top-7 right-0 w-40 mt-2 px-4 py-4 origin-top-right divide-y divide-gray-100 rounded-md bg-gray-800 shadow-lg ring-1 ring-black/5 focus:outline-none;
+      };
+
+      &Item{
+        @apply px-3 py-3 cursor-pointer text-white hover:underline;
+
+        &--Active {
+          @apply font-josefin text-yellow-500;
+        }
+      }
+    };
   }
 
   // Tansition animation

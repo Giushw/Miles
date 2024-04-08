@@ -125,7 +125,8 @@
       };
 
       &Link {
-        @apply hover:underline;
+        @apply transition-colors;
+        @apply hover:underline hover:text-yellow-500;
       }
     };
 

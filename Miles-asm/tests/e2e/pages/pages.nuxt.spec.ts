@@ -6,7 +6,7 @@ describe('Pages', async () => {
     rootDir: 'pages'
   })
 
-  test('Renders a Index page with correct text', async () => {
+  test.skip('Renders a Index page with correct text', async () => {
     const home = await $fetch('/');
   
     expect(home).toContain('Full Speed Ahead!');

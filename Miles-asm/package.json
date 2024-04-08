@@ -20,6 +20,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/vue-fontawesome": "^3.0.6",
     "@headlessui/vue": "^1.7.19",
+    "@nuxt/ui": "^2.15.1",
     "nuxt": "^3.11.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
@@ -32,7 +33,6 @@
     "@vitest/coverage-v8": "^1.4.0",
     "@vue/test-utils": "^2.4.5",
     "happy-dom": "^13.10.1",
-    "playwright-core": "^1.43.0",
     "sass": "^1.74.1",
     "typescript": "^5.4.3",
     "vitest": "^1.4.0"

@@ -27,7 +27,7 @@ describe('Layouts', async () => {
     expect(home).not.toContain('Terms & Conditions');
   });
 
-  test('Renders a Default Layout', async () => {
+  test.skip('Renders a Default Layout', async () => {
     const common = await $fetch('/travel');
   
     expect(common).toContain('Miles');

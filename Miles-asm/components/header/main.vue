@@ -44,6 +44,7 @@
     MenuItems,
     MenuItem
   } from '@headlessui/vue'
+
 </script>
 
 <style lang="scss">

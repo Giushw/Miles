@@ -6,10 +6,13 @@ export interface TravelRow {
   image?: string,
   description?: string,
   price: number,
-  rating?: number
+  rating: number
 };
 
-export type KV = {
+// define literal
+export type filterType = 'none' | 'top' | 'mid' | 'wrost';
+
+export type KL = {
   key: string,
-  value: string
+  label: string
 }

@@ -7,7 +7,7 @@ export default defineEventHandler(event => [
       "image": "tokyo",
       "description": "Experience the vibrant metropolis of Tokyo, with its bustling streets, neon lights, ancient temples, and innovative culture.",
       "price": 1990,
-      "rating": 4.9
+      "rating": 5
     },
     {
       "id": 2,
@@ -17,7 +17,7 @@ export default defineEventHandler(event => [
       "image": "bari",
       "description": "Explore the charming coastal city of Bari, known for its historic center, delicious seafood cuisine, and sunny beaches.",
       "price": 1499,
-      "rating": 4.7
+      "rating": 5
     },
     {
       "id": 3,
@@ -87,7 +87,7 @@ export default defineEventHandler(event => [
       "image": "amazon_rainforest",
       "description": "Embark on a journey into the heart of the Amazon, the world's largest rainforest, and discover its incredible biodiversity.",
       "price": 3499,
-      "rating": 3.5
+      "rating": 2.4
     },
     {
       "id": 10,
@@ -97,7 +97,7 @@ export default defineEventHandler(event => [
       "image": "petra",
       "description": "Explore the ancient city of Petra, carved into the rose-red sandstone cliffs, and discover its architectural wonders.",
       "price": 2599,
-      "rating": 3
+      "rating": 1.5
     }
   ]
 );
