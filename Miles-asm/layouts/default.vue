@@ -10,9 +10,6 @@
 </template>
 
 <style lang="scss">
-  // .defaultLayout {
-  // }
-
   .spacer {
     @apply mt-16;
   }

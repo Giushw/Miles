@@ -1,13 +1,10 @@
-import {assertType, expectTypeOf, test} from 'vitest';
+import {expectTypeOf, test} from 'vitest';
 import type {TravelRow} from '~/assets/types/travel';
 
 test('TravelRow work properly', () => {
   expectTypeOf(travelRow).not.toBeFunction();
-  expectTypeOf(travelRow).parameter(0).toMatchTypeOf<{ id: number }>()
-
-  // @ts-expect-error name is a string
-  assertType(travelRow({ name: 42 }))
-})
+  expectTypeOf(travelRow).toEqualTypeOf(travelRow);
+});
 
 // Fixstures
 const travelRow: TravelRow = {

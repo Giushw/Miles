@@ -9,6 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "test": "vitest",
+    "test:unit": "vitest /unit",
+    "test:e2e": "vitest /e2e",
     "coverage": "vitest run --coverage"
   },
   "dependencies": {

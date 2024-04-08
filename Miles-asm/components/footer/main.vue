@@ -84,7 +84,7 @@
 
 <style lang="scss">
   .footerM {
-    @apply bg-gray-900;
+    @apply bg-gray-900 mt-0;
 
     &_main {
       @apply mx-auto w-full max-w-screen-xl p-4 py-6;

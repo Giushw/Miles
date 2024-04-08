@@ -8,12 +8,7 @@ export default defineNuxtConfig({
   ],
   css: [
     '@/assets/css/main.css',
-  ],
-  app: {
-    // TODO: find why this generate a bug with layout breaking only on first render
-    // pageTransition: {name: 'page', mode: 'out-in'},
-    // layoutTransition: {name: 'layout', mode: 'out-in'}
-  }
+  ]
 });
 
 
