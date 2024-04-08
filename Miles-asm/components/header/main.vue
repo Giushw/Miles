@@ -2,8 +2,8 @@
   <header class="headerM">
     <div class="headerM_wrapper">
       <NuxtLink to="/" class="headerM_logo">
-        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Miles Logo" />
-        <span class="headerM_logoText">Miles</span>
+        <img src="/svg/logo.svg" class="h-8" alt="Miles Logo" />
+        <span class="headerH_logoText">Miles</span>
       </NuxtLink>
       <div class="headerM_menu">
         <Menu>

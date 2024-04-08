@@ -1,12 +1,12 @@
 <template>
   <footer class="footerM">
-    <div class="footerM_main">
+    <article class="footerM_main">
       <div class="footerM_heading">
         <div class="footerM_logo">
-          <NuxtLink to="/" class="footerM_logoGroup">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="footerM_logoImage" alt="Miles Logo" />
+          <div class="footerM_logoGroup">
+            <img src="/svg/logo.svg" class="footerM_logoImage" alt="Miles Logo" />
             <span class="footerM_logoText">Miles</span>
-          </NuxtLink>
+          </div>
         </div>
         <div class="footerM_nav">
           <div>
@@ -68,7 +68,7 @@
           </a>
         </div>
       </div>
-    </div>
+    </article>
   </footer>
 </template>
 
@@ -84,7 +84,7 @@
 
 <style lang="scss">
   .footerM {
-    @apply bg-gray-900 mt-0;
+    @apply bg-gray-800 mt-0;
 
     &_main {
       @apply mx-auto w-full max-w-screen-xl p-4 py-6;
@@ -117,7 +117,7 @@
       @apply sm:gap-6 sm:grid-cols-3;
 
       &Title {
-        @apply mb-6 text-sm font-semibold uppercase text-white;
+        @apply mb-6 text-sm font-semibold uppercase text-yellow-500;
       };
 
       &List {
@@ -149,7 +149,7 @@
       @apply sm:justify-center sm:mt-0;
 
       &Link {
-        @apply text-gray-500 hover:text-white ms-5;
+        @apply text-gray-500 hover:text-yellow-500 ms-5;
       }
     };
   }

@@ -76,7 +76,13 @@
                 </thead>
                 <tbody>
                   <TransitionGroup name="fade" mode="out-in">
-                    <CommonSpinner v-if="pending" />
+                    <template v-if="pending">
+                      <tr>
+                        <td colspan="6">
+                          <CommonSpinner />
+                        </td>
+                      </tr>
+                    </template>
                     <template v-else>
                       <TableRow v-for="travel in travels"
                         :id="travel.id"

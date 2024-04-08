@@ -24,7 +24,7 @@
       @apply flex items-center space-x-3 rtl:space-x-reverse;
 
       &Text {
-        @apply self-center text-2xl font-semibold whitespace-nowrap text-white;
+        @apply self-center text-2xl font-semibold whitespace-nowrap text-white font-spinnaker ;
       }
     }
   }
