@@ -15,12 +15,9 @@
 </template>
 
 <script setup lang="ts">
-	defineProps({
-		text: {
-			type: String,
-			required: true
-		}
-	});
+  defineProps<{
+    text: string
+  }>();
 </script>
 
 
@@ -36,7 +33,8 @@
     &_title {
       @apply mb-4 text-4xl font-extrabold tracking-tight leading-none text-yellow-500 font-josefin ;
       @apply md:text-5xl lg:text-9xl;
-      // TODO: Tailwind Override for big font size
+      
+      // Tailwind Override for big font size
       @media (max-width: 1023px) {
         font-size: 12rem;
       };

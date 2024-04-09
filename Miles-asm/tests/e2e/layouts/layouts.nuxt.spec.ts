@@ -26,24 +26,4 @@ describe('Layouts', async () => {
     expect(home).not.toContain('LEGAL');
     expect(home).not.toContain('Terms & Conditions');
   });
-
-  test.skip('Renders a Default Layout', async () => {
-    const common = await $fetch('/travel');
-  
-    expect(common).toContain('Miles');
-
-    // expect(common).not.toContain('© 2024 Miles™ All Rights Reserved.');
-
-    expect(common).toContain('RESOURCES');
-    expect(common).toContain('About us');
-    expect(common).toContain('FAQ');
-
-    expect(common).toContain('GET IN TOUCH');
-    expect(common).toContain('Contact us');
-    expect(common).toContain('Work with us');
-
-    expect(common).toContain('LEGAL');
-    expect(common).toContain('Privacy Policy');
-    expect(common).toContain('Terms & Conditions');
-  });
 })

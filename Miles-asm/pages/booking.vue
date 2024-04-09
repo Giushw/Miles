@@ -1,11 +1,9 @@
 <template>
-    <div class="bookingWrapper">
-      <TableBooking />
-    </div>
+  <CommonTba text="Booking"/>
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  layout: 'home'
+})
 </script>
-
-<style lang="scss">
-</style>

@@ -13,10 +13,10 @@
           </MenuButton>
           <MenuItems>
             <MenuItem v-slot="{active}">
-              <NuxtLink to="/travel" :class='{"bg-blue-500": active}'>Travel</NuxtLink>
+              <NuxtLink to="/travel" :class='{"bg-yellow-500": active}'>Travel</NuxtLink>
             </MenuItem>
             <MenuItem v-slot="{active}">
-              <NuxtLink to="/booking" :class='{"bg-blue-500": active}'>Booking</NuxtLink>
+              <NuxtLink to="/booking" :class='{"bg-yellow-500": active}'>Booking</NuxtLink>
             </MenuItem>
           </MenuItems>
         </Menu>
@@ -43,13 +43,12 @@
     MenuButton,
     MenuItems,
     MenuItem
-  } from '@headlessui/vue'
-
+  } from '@headlessui/vue';
 </script>
 
 <style lang="scss">
   .headerM {
-    @apply bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-600;
+    @apply bg-gray-800 fixed w-full z-20 top-0 start-0 border-b border-gray-700;
 
     &_wrapper {
       @apply max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4;
@@ -79,15 +78,15 @@
       @apply md:flex md:w-auto md:order-1;
 
       &List {
-        @apply flex flex-col p-4 mt-4 font-medium border border-gray-700 rounded-lg bg-gray-800;
+        @apply flex flex-col p-4 mt-4 font-medium border border-gray-700 rounded-lg bg-transparent;
         @apply rtl:space-x-reverse;
-        @apply md:p-0 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-gray-900;
+        @apply md:p-0 md:space-x-8 md:flex-row md:mt-0 md:border-0;
       }
     };
 
     &_link {
       @apply block py-2 px-3 rounded text-white hover:text-white border-gray-700 hover:bg-gray-100;
-      @apply md:p-0 md:hover:text-blue-500 md:hover:bg-transparent;
+      @apply md:p-0 md:hover:text-yellow-500 md:hover:bg-transparent;
     };
   }
 </style>

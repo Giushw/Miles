@@ -6,7 +6,6 @@ test('TravelRow work properly', () => {
   expectTypeOf(travelRow).toEqualTypeOf(travelRow);
 });
 
-// Fixstures
 const travelRow: TravelRow = {
   id: 2,
   name: 'foo', 

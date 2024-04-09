@@ -6,16 +6,16 @@ describe('Pages', async () => {
     rootDir: 'pages'
   })
 
-  test.skip('Renders a Index page with correct text', async () => {
-    const home = await $fetch('/');
-  
-    expect(home).toContain('Full Speed Ahead!');
-  });
-
   test('Renders a About page with correct text', async () => {
     const about = await $fetch('/about');
   
     expect(about).toContain('About');
+  });
+
+  test('Renders a Booking page with correct text', async () => {
+    const about = await $fetch('/booking');
+  
+    expect(about).toContain('Booking');
   });
 
   test('Renders a Contact page with correct text', async () => {
@@ -47,7 +47,4 @@ describe('Pages', async () => {
   
     expect(privacy).toContain('Privacy Policy');
   });
-
-  // Booking
-  // Travel
 })
