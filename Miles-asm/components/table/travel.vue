@@ -206,11 +206,8 @@
 
   const editRow = (fm: CreateTravelRow) => {
     if (travels.value) {
-      console.log('found: ', fm);
-    } else {
-      console.log('not found');
+      console.log('edit fn: ', fm);
     }
-    
   };
 </script>
 
